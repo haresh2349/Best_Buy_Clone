@@ -5,10 +5,6 @@
 .navbar {
   width: 100vw;
   max-width: 1349px;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
   background-color: #0046be;
 }
 .nav_top {
@@ -89,14 +85,15 @@
 }
 .nav_bottom {
   display: flex;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
+  align-items: center;
   justify-content: space-between;
 }
 .nav_bottom a {
   color: #ffff;
   display: flex;
   flex-wrap: nowrap;
-  font-size: 15px;
+  font-size: 13px;
   text-decoration: none;
 }
 .nav_bottom a:hover {
@@ -104,18 +101,20 @@
 }
 .nav_bottom_left {
   display: flex;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   justify-content: space-around;
 }
 .nav_bottom_right {
   display: flex;
   grid-gap: 2rem;
   font-weight: 600;
+  align-items: center;
   justify-content: space-around;
 }
 .account_nav_bottom {
   display: flex;
   grid-gap: 5px;
+  align-items: center;
 }
 
 .mob_nav_top {
