@@ -55,3 +55,22 @@ export const getLaptopsData = (dispatch) => {
       });
     });
 };
+
+export const getSingleProduct = (dispatch, id) => {
+  dispatch({
+    type: types.GET_SINGLE_PRODUCT_REQUEST,
+  });
+  axios
+    .get(`http://localhost:8080/laptops/${id}`)
+    .then((res) => {
+      dispatch({
+        type: types.GET_SINGLE_PRODUCT_SUCCESS,
+        payload: res.data,
+      });
+    })
+    .catch((err) => {
+      dispatch({
+        type: types.GET_SINGLE_PRODUCT_FAILURE,
+      });
+    });
+};

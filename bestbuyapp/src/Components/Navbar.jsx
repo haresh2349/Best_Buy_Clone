@@ -10,12 +10,14 @@ const Navbar = () => {
   return (
     <div className={styles.navbar}>
       <div className={styles.nav_top}>
-        <div className={styles.compny_logo}>
-          <img
-            src="https://logodownload.org/wp-content/uploads/2020/05/best-buy-logo.png"
-            alt=""
-          />
-        </div>
+        <Link to="/">
+          <div className={styles.compny_logo}>
+            <img
+              src="https://logodownload.org/wp-content/uploads/2020/05/best-buy-logo.png"
+              alt=""
+            />
+          </div>
+        </Link>
         <div className={styles.hamburger}>
           <MenuIcon />
           <h3>MENU</h3>

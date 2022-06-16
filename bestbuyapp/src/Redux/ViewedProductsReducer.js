@@ -1,12 +1,13 @@
 import * as types from "./actionTypes";
 
 const initState = {
+  error: false,
   loading: true,
   viewed_products: [],
   featured_products: [],
   laptops: [],
   mobiles: {},
-  error: false,
+  product: {},
 };
 export const ViewedProductsReducer = (state = initState, action) => {
   switch (action.type) {
@@ -70,6 +71,28 @@ export const ViewedProductsReducer = (state = initState, action) => {
       };
     }
     case types.GET_LAPTOPS_DATA_FAILURE: {
+      return {
+        ...state,
+        loading: false,
+        error: true,
+      };
+    }
+    case types.GET_SINGLE_PRODUCT_REQUEST: {
+      return {
+        ...state,
+        loading: true,
+        error: false,
+      };
+    }
+    case types.GET_SINGLE_PRODUCT_SUCCESS: {
+      return {
+        ...state,
+        loading: false,
+        error: false,
+        product: action.payload,
+      };
+    }
+    case types.GET_SINGLE_PRODUCT_FAILURE: {
       return {
         ...state,
         loading: false,

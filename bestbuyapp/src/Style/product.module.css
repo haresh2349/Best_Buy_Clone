@@ -1,0 +1,13 @@
+.prod_leftBox {
+  width: 45%;
+  height: 400px;
+}
+.img_box {
+  width: 300px;
+  width: 300px;
+}
+.img_box img {
+  width: 100%;
+  width: 100%;
+  object-fit: contain;
+}

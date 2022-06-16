@@ -16,7 +16,9 @@ import BookmarkIcon from "@mui/icons-material/Bookmark";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 const Products = () => {
   const dispatch = useDispatch();
-  const { laptops } = useSelector((store) => store.ViewedProductsReducer);
+  const { laptops, loading, error } = useSelector(
+    (store) => store.ViewedProductsReducer
+  );
   useEffect(() => {
     getLaptopsData(dispatch);
   }, []);
@@ -32,15 +34,22 @@ const Products = () => {
             <SelectSmall />
           </div>
         </div>
-        {laptops.length > 0 &&
+        {loading ? (
+          <h2 style={{ textAlign: "center" }}>Loading....</h2>
+        ) : error ? (
+          <h2>something went wrong</h2>
+        ) : (
+          laptops.length > 0 &&
           laptops.map((item) => {
             return (
               <div className={styles.prodFlexBox}>
-                <div className={styles.prodImage}>
-                  <img src={item.thumb} alt="laptop" />
-                </div>
+                <Link to={`/${item.category}/${item.id}`}>
+                  <div className={styles.prodImage}>
+                    <img src={item.thumb} alt="laptop" />
+                  </div>
+                </Link>
                 <div className={styles.prodDetails}>
-                  <Link to="#">{item.title}</Link>
+                  <Link to={`/${item.category}/${item.id}`}>{item.title}</Link>
                   <div className={styles.model}>
                     <span>
                       {" "}
@@ -119,7 +128,8 @@ const Products = () => {
                 </div>
               </div>
             );
-          })}
+          })
+        )}
       </div>
     </div>
   );
