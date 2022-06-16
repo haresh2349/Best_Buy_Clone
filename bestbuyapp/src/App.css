@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 40px;
+  line-height: 1;
+  opacity: 0.75;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+}
+.slick-prev {
+  left: -50px;
+}
+.slick-slide {
+  outline: none;
+  width: 200px;
+}
+.MuiPaper-root {
+  top: 210px;
+}
