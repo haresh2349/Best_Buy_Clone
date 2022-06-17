@@ -1,0 +1,184 @@
+.wrapper {
+  width: 100%;
+  background-color: #f0f2f4;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 0;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.h_title p {
+  font-size: 26px;
+  margin: 10px 0;
+  font-weight: 700;
+}
+.f_container {
+  display: flex;
+  gap: 50px;
+}
+.left {
+  width: 65%;
+}
+.form_box {
+  width: 100%;
+  padding: 30px 20px;
+  background-color: #fff;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.box_heading p {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+
+.box_sub_heading p {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.border {
+  height: 1px;
+  width: 100%;
+  background-color: #9e9e9ec4;
+  margin: 16px 0;
+}
+.right {
+  flex: 1;
+  text-align: left;
+}
+.b_title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 17px;
+}
+
+.cart_items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cart_ietm {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.i_left,
+.i_right {
+  flex: 1;
+}
+
+.item {
+  margin: 10px 0;
+}
+.i_left {
+  display: flex;
+  gap: 20px;
+  flex: 2;
+}
+
+.img {
+  width: 100%;
+}
+.img img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.i_title {
+  font-size: 13px;
+}
+.price {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.i_right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.border {
+  height: 1px;
+  width: 100%;
+  background-color: #9e9e9ec4;
+  margin: 16px 0;
+}
+.cart_total {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.c_flex {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.c_f_left,
+.c_f_right {
+  flex: 1;
+  font-size: 13px;
+}
+
+.c_f_right {
+  text-align: right;
+  font-weight: 600;
+}
+
+.blue {
+  color: #0046be;
+  cursor: pointer;
+}
+.blue:hover {
+  color: #001e73;
+  text-decoration: underline;
+}
+
+.total_price {
+  margin-top: 8px;
+}
+
+.bold {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #0046be;
+  transition: background-color 0.6s ease;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+}
+.btn:hover {
+  background-color: #001e73;
+}
