@@ -12,7 +12,13 @@
   color: black;
   -webkit-font-smoothing: antialiased;
 }
-.slick-prev {
+#root
+  > div
+  > div
+  > div:nth-child(9)
+  > div
+  > div
+  > button.slick-arrow.slick-prev.slick-disabled {
   left: -50px;
 }
 .slick-slide {
@@ -21,4 +27,24 @@
 }
 .MuiPaper-root {
   top: 210px;
+}
+#root
+  > div
+  > div
+  > div.product_single_product__eBrF0
+  > div.product_prod_leftBox__nlsSW
+  > div
+  > button.slick-arrow.slick-prev {
+  left: 0px;
+  z-index: 99999;
+}
+#root
+  > div
+  > div
+  > div.product_single_product__eBrF0
+  > div.product_prod_leftBox__nlsSW
+  > div
+  > button.slick-arrow.slick-next {
+  right: 15px;
+  z-index: 99999;
 }

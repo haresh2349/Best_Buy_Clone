@@ -214,7 +214,7 @@
   margin: 20px;
   background-size: 100%;
   background-repeat: no-repeat;
-  background-image: url("https://pisces.bbystatic.com/image2/BestBuy_US/dam/MMT-579799-GHP-B_DiscoParis-LV_DER-25260c77-4b9f-43c1-aeb0-914754f1ec56.jpg");
+  background-image: url("https://pisces.bbystatic.com/image2/BestBuy_US/dam/subghp-MMT-555591-windows-fcc6f1ef-675e-463d-bee8-64bd19088fbb.jpg");
 }
 .home_d .home_d_left div {
   margin: 40px 20px 0 40px;
@@ -222,13 +222,11 @@
 .home_d .home_d_right div {
   margin: 20px 20px 0 40px;
 }
-.home_d .home_d_left h2,
-.home_d_right h2 {
+.home_d .home_d_left h2 {
   font-size: 40px;
   color: #1d252c;
 }
-.home_d .home_d_left p,
-.home_d_right p {
+.home_d .home_d_left p {
   font-size: 15px;
   color: #1d252c;
   margin-top: 8px;
@@ -246,9 +244,19 @@
   width: 50%;
   height: 450px;
   margin: 20px;
-  background-image: url("https://pisces.bbystatic.com/image2/BestBuy_US/dam/subghp-MMT-555591-tv-4ef8f148-989d-4846-ae5c-65854b349e5b.jpg");
+  padding: 20px;
+  background-image: url("https://pisces.bbystatic.com/image2/BestBuy_US/dam/pol_EVN-200496_der-1d8c7654-778a-46ed-9a66-ba0b9e0775c7.jpg;maxHeight=646;maxWidth=948");
   background-size: 100%;
   background-repeat: no-repeat;
+}
+.home_d_right h2 {
+  font-size: 40px;
+  color: #ffff;
+}
+.home_d_right p {
+  font-size: 15px;
+  color: #ffff;
+  margin-top: 8px;
 }
 .home_e {
   max-width: 1349px;

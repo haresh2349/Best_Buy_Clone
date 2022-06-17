@@ -4,10 +4,9 @@ import styles from "../Style/home.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import "../App.css";
+import "../Style/home_carosul.module.css";
 
 export function Home_carosul({ data }) {
-  console.log(data, "d");
   const settings = {
     dots: false,
     infinite: false,

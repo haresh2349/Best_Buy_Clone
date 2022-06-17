@@ -2,12 +2,10 @@ import React, { useEffect } from "react";
 import FilterComponents from "../Components/FilterComponents";
 import SelectSmall from "../Components/SelectComponent";
 import styles from "../Style/products.module.css";
-import "../App.css";
 import { useDispatch, useSelector } from "react-redux";
-import { getLaptopsData } from "../Redux/action";
+import { addProductCart, getLaptopsData, getMobiles } from "../Redux/action";
 import StarIcon from "@mui/icons-material/Star";
-import LocalOfferIcon from "@mui/icons-material/LocalOffer";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import LocalOfferOutlinedIcon from "@mui/icons-material/LocalOfferOutlined";
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
 import { Checkbox, FormControlLabel, FormGroup } from "@mui/material";
@@ -16,13 +14,15 @@ import BookmarkIcon from "@mui/icons-material/Bookmark";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 const Products = () => {
   const dispatch = useDispatch();
-  const { laptops, loading, error } = useSelector(
-    (store) => store.ViewedProductsReducer
+  const { laptops, mobiles, loading, error, product } = useSelector(
+    (store) => store.ProductsReducer
   );
+  const { category } = useParams();
   useEffect(() => {
     getLaptopsData(dispatch);
+    getMobiles(dispatch);
   }, []);
-  console.log(laptops, "stoe");
+  const data = category == "laptop" ? laptops : mobiles;
   return (
     <div className={styles.productsMain}>
       <FilterComponents />
@@ -39,10 +39,10 @@ const Products = () => {
         ) : error ? (
           <h2>something went wrong</h2>
         ) : (
-          laptops.length > 0 &&
-          laptops.map((item) => {
+          data.length > 0 &&
+          data.map((item) => {
             return (
-              <div className={styles.prodFlexBox}>
+              <div className={styles.prodFlexBox} key={item.id}>
                 <Link to={`/${item.category}/${item.id}`}>
                   <div className={styles.prodImage}>
                     <img src={item.thumb} alt="laptop" />
@@ -122,9 +122,9 @@ const Products = () => {
                     <b>Free 6-month security software</b>
                     <span>A $29.99 value</span>
                   </div>
-                  <button>
+                  {/* <button onClick={handleCart}>
                     <ShoppingCartIcon /> <span>Add to Cart</span>
-                  </button>
+                  </button> */}
                 </div>
               </div>
             );

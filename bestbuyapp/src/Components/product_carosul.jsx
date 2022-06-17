@@ -1,23 +1,27 @@
 import React from "react";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import styles from "../Style/product.module.css";
+import "../Style/product_carosul.module.css";
+import "../App.css";
 export default function SimpleSlider({ data }) {
   var settings = {
-    dots: true,
-    infinite: true,
+    dots: false,
+    infinite: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
-  console.log(data, "dd");
   return (
     <Slider {...settings}>
-      <h1>Hello</h1>
-      {data.images.length > 0 &&
-        data.images.map((el) => {
-          <div className={styles.img_box}>
-            <img src={el.img} alt="" />
-          </div>;
+      {data.length > 0 &&
+        data.map((el) => {
+          return (
+            <div className={styles.img_box}>
+              <img src={el.img} alt="" />
+            </div>
+          );
         })}
     </Slider>
   );

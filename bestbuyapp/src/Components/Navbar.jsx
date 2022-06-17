@@ -30,13 +30,15 @@ const Navbar = () => {
           <LocalOfferOutlinedIcon />
           <h3>Aiea</h3>
         </div>
-        <div className={styles.account_nav_top}>
+        <div style={{ display: "none" }} className={styles.account_nav_top}>
           <AccountCircleOutlinedIcon />
         </div>
-        <div className={styles.cart}>
-          <ShoppingCartOutlinedIcon />
-          <h3>Cart</h3>
-        </div>
+        <Link to="/cart">
+          <div className={styles.cart}>
+            <ShoppingCartOutlinedIcon />
+            <h3>Cart</h3>
+          </div>
+        </Link>
       </div>
       <div className={styles.nav_bottom}>
         <div className={styles.nav_bottom_left}>
@@ -51,7 +53,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className={styles.nav_bottom_right}>
-          <Link to="/h" className={styles.account_nav_bottom}>
+          <Link to="/signin" className={styles.account_nav_bottom}>
             <span>
               <AccountCircleOutlinedIcon />
             </span>{" "}

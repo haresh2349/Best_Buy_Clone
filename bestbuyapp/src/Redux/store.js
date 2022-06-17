@@ -1,8 +1,8 @@
 import { combineReducers, legacy_createStore } from "redux";
-import { ViewedProductsReducer } from "../Redux/ViewedProductsReducer";
+import { ProductsReducer } from "../Redux/ProductsReducer";
 
 const rootReducer = combineReducers({
-  ViewedProductsReducer,
+  ProductsReducer,
 });
 
 export const store = legacy_createStore(rootReducer);

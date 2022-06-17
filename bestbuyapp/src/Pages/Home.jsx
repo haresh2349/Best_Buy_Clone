@@ -6,7 +6,9 @@ import { getFeaturedProducts, getViewedProducts } from "../Redux/action";
 import { useEffect } from "react";
 import { Home_carosul } from "../Components/Home_carosul";
 const Home = () => {
-  const state = useSelector((store) => store.ViewedProductsReducer);
+  const { viewed_products, featured_products } = useSelector(
+    (store) => store.ProductsReducer
+  );
   const dispatch = useDispatch();
   useEffect(() => {
     getViewedProducts(dispatch);
@@ -14,8 +16,8 @@ const Home = () => {
   useEffect(() => {
     getFeaturedProducts(dispatch);
   }, [dispatch]);
-  console.log(state);
-  console.log(state.viewed_products);
+  // console.log(state);
+  // console.log(state.viewed_products);
   return (
     <>
       <div className={styles.home_a}>
@@ -147,7 +149,7 @@ const Home = () => {
         <div className={styles.innerYellow}>
           <div>
             <h3>Insignia™ air fryers product recall.</h3>
-            <Link to="/">Learn more</Link>
+            <Link to="#">Learn more</Link>
           </div>
         </div>
       </div>
@@ -156,18 +158,18 @@ const Home = () => {
           <div>
             <h2>Introducing Surface Laptop Go 2.</h2>
             <p>Sleek, light, on the go performance.</p>
-            <Link to="/products">
+            <Link to="/laptop">
               <button className={styles.home_d_btn}>Shop Now</button>
             </Link>
           </div>
         </div>
         <div className={styles.home_d_right}>
           <div>
-            <h2>Smart TVs</h2>
+            <h2>Smart Phones</h2>
             <p>as low as $109.99.</p>
-            {/* <Link to="/mobiles">
+            <Link to="/mobiles">
               <button className={styles.home_d_btn}>Shop Now</button>
-            </Link> */}
+            </Link>
           </div>
         </div>
       </div>
@@ -428,11 +430,11 @@ const Home = () => {
         </div>
       </div>
       <div className={styles.home_h}>
-        {state.viewed_products.length > 0 && (
+        {viewed_products.length > 0 && (
           <>
             <h3>Related to items you've viewed (6 items)</h3>
             <div className={styles.home_h_products}>
-              <Home_carosul data={state?.viewed_products} />
+              <Home_carosul data={viewed_products} />
             </div>
           </>
         )}
@@ -494,11 +496,11 @@ const Home = () => {
         </div>
       </div>
       <div className={styles.home_h}>
-        {state.featured_products.length > 0 && (
+        {featured_products.length > 0 && (
           <>
             <h3>Featured products (6 items)</h3>
             <div className={styles.home_h_products}>
-              <Home_carosul data={state.featured_products} />
+              <Home_carosul data={featured_products} />
             </div>
           </>
         )}

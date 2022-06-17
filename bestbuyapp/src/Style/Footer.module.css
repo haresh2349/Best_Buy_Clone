@@ -1,0 +1,203 @@
+.wrapper {
+  width: 100%;
+  background-color: #f0f2f4;
+}
+
+.f_container {
+  max-width: 1260px;
+  margin: auto;
+  padding: 30px 0;
+}
+
+.icon {
+  margin-bottom: 15px;
+}
+
+.icon_navigation {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.icon_box {
+  padding: 10px;
+  flex: 1;
+}
+
+.i_title {
+  color: #0046be;
+  cursor: pointer;
+}
+.i_title:hover {
+  color: #001e73;
+  text-decoration: underline;
+}
+
+.border {
+  height: 1px;
+  width: 100%;
+  background-color: #9e9e9ec4;
+  margin: 20px 0;
+}
+
+.navigation_links {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+.left {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  gap: 20px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 275px;
+  width: 100%;
+}
+
+.head {
+  font-size: 16px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.links ul {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.links ul li {
+  color: #0046be;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 4px 0;
+  text-align: left;
+}
+
+.links ul li:hover {
+  color: #001e73;
+  text-decoration: underline;
+}
+
+.right {
+  background-color: #fff;
+  width: 31%;
+  padding: 18px;
+  text-align: left;
+}
+
+.r_head {
+  margin-bottom: 18px;
+}
+
+.r_head p {
+  color: #0046be;
+  cursor: pointer;
+  font-size: 14px;
+  font-size: 100;
+}
+.r_head p:hover {
+  color: #001e73;
+  text-decoration: underline;
+}
+
+.r_form {
+  margin: 12px 0;
+  margin-bottom: 25px;
+}
+
+.r_form p {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.f {
+  display: flex;
+  gap: 10px;
+}
+
+.f input {
+  width: 70%;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid;
+}
+.f button {
+  width: 30%;
+  background-color: #0046be;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.6s ease-in-out;
+}
+
+.f button:hover {
+  background-color: #001e73;
+}
+
+.app_section {
+  margin: 12px 0;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.app_section .a_icon {
+  /* width: 40px;
+  height: 40px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.a_buy .a_buy_t {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.a_small {
+  color: #0046be;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+}
+.a_small:hover {
+  color: #001e73;
+  text-decoration: underline;
+}
+
+.social_handles {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.s_icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.blogs p {
+  color: #0046be;
+  cursor: pointer;
+  font-size: 14px;
+}
+.blogs p:hover {
+  text-decoration: underline;
+  color: #001e73;
+}
